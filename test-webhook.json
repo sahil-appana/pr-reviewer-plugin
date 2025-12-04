@@ -1,0 +1,17 @@
+{
+  "pullrequest": {
+    "id": 123,
+    "title": "Test PR Review",
+    "description": "Testing webhook integration",
+    "source": {
+      "branch": {
+        "name": "feature/test"
+      }
+    },
+    "destination": {
+      "branch": {
+        "name": "main"
+      }
+    }
+  }
+}

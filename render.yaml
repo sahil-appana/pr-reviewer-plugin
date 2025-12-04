@@ -1,0 +1,26 @@
+services:
+  - type: web
+    name: pr-reviewer-webhook
+    env: node
+    plan: free
+    buildCommand: cd pr-reviewer-plugin && npm install
+    startCommand: cd pr-reviewer-plugin && node src/server.js
+    envVars:
+      - key: PORT
+        value: 3000
+      - key: NODE_ENV
+        value: production
+      - key: LOG_LEVEL
+        value: info
+      - key: BITBUCKET_WORKSPACE
+        value: airtel123
+      - key: BITBUCKET_REPO
+        value: pr-reviewer-plugin
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+      - key: BITBUCKET_AUTH
+        sync: false
+      - key: MAIN_SERVER
+        value: https://your-main-server-url.onrender.com
