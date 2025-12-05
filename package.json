@@ -5,8 +5,8 @@
   "type": "module",
   "main": "src/server.js",
   "scripts": {
-    "start": "node src/server.js",
-    "dev": "node src/server.js"
+    "start": "cd pr-reviewer-plugin && node src/server.js",
+    "dev": "cd pr-reviewer-plugin && node src/server.js"
   },
   "keywords": [],
   "author": "",
